@@ -13,8 +13,11 @@ describe('ipcheckerkun', () => {
     });
 
     it('hostname()', async () => {
-        // github actions の場合は hostname を取得できない
-        expect(ipChecker.hostname()).toBeTruthy() || expect(ipChecker.timezone()).toBe('America/Chicago');
+        const hostname = ipChecker.hostname();
+        const timezone = ipChecker.timezone();
+
+        // hostname はローカルの場合取得できるが、github actions の場合取得できない
+        expect(hostname !== undefined || timezone === 'America/Chicago').toBe(true);
     });
 
     it('city()', async () => {
@@ -50,9 +53,11 @@ describe('ipcheckerkun', () => {
     });
 
     it('timezone()', async () => {
-        expect(ipChecker.timezone()).toBeTruthy();
+        const timezone = ipChecker.timezone();
+
+        expect(timezone).toBeTruthy();
         // ローカルでのテスト、もしくはgithub actions でのテスト
-        expect(ipChecker.timezone()).toBe('Asia/Tokyo') || expect(ipChecker.timezone()).toBe('America/Chicago');
+        expect(timezone === 'Asia/Tokyo' || timezone === 'America/Chicago').toBe(true);
     });
 
     it('all()', async () => {
