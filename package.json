@@ -29,7 +29,6 @@
     "uglify-js": "^3.17.4"
   },
   "dependencies": {
-    "isomorphic-fetch": "^3.0.0",
-    "node-fetch": "^3.3.0"
+    "isomorphic-fetch": "^3.0.0"
   }
 }
