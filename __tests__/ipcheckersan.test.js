@@ -14,7 +14,7 @@ describe('ipcheckerkun', () => {
 
     it('hostname()', async () => {
         // GitHub Actions の場合は hostname が取得できないため
-        if (process.env.GITHUB_ACTIONS === true) {
+        if (process.env.GITHUB_ACTIONS === 'true') {
             expect(true).toBe(true);
         } else {
             expect(ipChecker.hostname()).toBeTruthy();
