@@ -12,8 +12,9 @@
     "url": "git+https://github.com/kanagama/ipchecker-kun.git"
   },
   "keywords": [
-    "'ip'",
-    "'check'"
+    "ip",
+    "checker",
+    "kakunin"
   ],
   "author": "k-nagama",
   "license": "MIT",
