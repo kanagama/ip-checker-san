@@ -17,7 +17,7 @@ describe('ipcheckerkun', () => {
         const timezone = ipChecker.timezone();
 
         // hostname はローカルの場合取得できるが、github actions の場合取得できない
-        expect(hostname !== undefined || timezone === 'America/Chicago').toBe(true);
+        expect((hostname !== undefined || timezone === 'America/Chicago')).toBe(true);
     });
 
     it('city()', async () => {
@@ -57,7 +57,7 @@ describe('ipcheckerkun', () => {
 
         expect(timezone).toBeTruthy();
         // ローカルでのテスト、もしくはgithub actions でのテスト
-        expect(timezone === 'Asia/Tokyo' || timezone === 'America/Chicago').toBe(true);
+        expect((timezone === 'Asia/Tokyo' || timezone === 'America/Chicago')).toBe(true);
     });
 
     it('all()', async () => {
