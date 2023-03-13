@@ -1,4 +1,4 @@
-const IpChecker = require('./src/ipchecker');
+const IpChecker = require('./src/ipcheckersan');
 
 module.exports = {
     IpChecker,

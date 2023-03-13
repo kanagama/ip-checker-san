@@ -171,3 +171,28 @@ console.log(all);
 // }
 ```
 
+<br>
+
+## 開発スクリプト
+
+※package.json の scripts を参照
+
+### jest
+
+```bash
+npm run test
+```
+
+### TypeScriptコンパイル
+
+```bash
+npm run tsc
+```
+
+### webpack
+
+dist/ipcheckersan.min.js を作成
+
+```bash
+npm run build
+```
