@@ -183,6 +183,12 @@ console.log(all);
 npm run test
 ```
 
+### 静的解析
+
+```bash
+npm run static_analysis
+```
+
 ### TypeScriptコンパイル
 
 ```bash
