@@ -286,7 +286,7 @@ class IpCheckerSan
    * @return {Promise<boolean>}
    */
   private async completed(): Promise<boolean> {
-    let counter: number = 1;
+    let counter = 1;
     while (!this.fetchCompleted) {
       await new Promise(resolve => {
         setTimeout(resolve, 100);
